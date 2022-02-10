@@ -1,0 +1,14 @@
+.testClass {
+    background: #bebebe;
+    border: darkblue 1px solid;
+}
+
+
+.widget {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    min-width: 350px;
+    width: 60%;
+    padding: 15px;
+}
