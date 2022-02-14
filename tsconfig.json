@@ -13,4 +13,5 @@
       "allowSyntheticDefaultImports":true,
       "lib": ["es5", "es6", "dom"]
     },
+    "include": ["src"]
   }

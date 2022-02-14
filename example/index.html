@@ -21,15 +21,21 @@
   <body>
     <div class="demo">
       <h3 class="testClass">Hey from Example</h3>
-      <div id="test" data-widget-target></div>
+      <div id="widget-a"></div>
+      <div id="widget-b"></div>
     </div>
 
-    <script src="../dist-dev/index.js"></script>
+    <script src="../dist-dev/widgetA/index.js"></script>
+    <script src="../dist-dev/widgetB/index.js"></script>
     <script>
       // An example using manual rendering
       // delete data-widget-target then 
       // you can uncomment this line
       // myWidget.mountWidget(document.getElementById("test"))
     </script>
+        <script>
+          widgetA.mountWidget(document.getElementById("widget-b"))
+          widgetB.mountWidget(document.getElementById("widget-a"))
+        </script>
   </body>
 </html>

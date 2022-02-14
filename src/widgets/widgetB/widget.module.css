@@ -1,0 +1,14 @@
+.testClass {
+    background: #d88585;
+    border: rgb(65, 124, 75) 1px solid;
+}
+
+
+.widget {
+    position: fixed;
+    bottom: 300px;
+    left: 0;
+    min-width: 350px;
+    width: 60%;
+    padding: 15px;
+}
