@@ -2,6 +2,8 @@ import * as React from 'react';
 import reactDOM, { render } from 'react-dom';
 import { mountStyle } from './mountStyle';
 
+const widgetName = process.env.WIDGET_NAME;
+
 type ComponentType = Parameters<typeof React.createElement>[0];
 
 export function mountWidgetWithCssContent(cssContent: string) {
@@ -11,8 +13,12 @@ export function mountWidgetWithCssContent(cssContent: string) {
   };
 }
 
+
+const targetHostSelector = `[data-widget-${widgetName}]`;
+console.log(`mouting ${widgetName} under the node with data attribute ${targetHostSelector}`)
+
 export function startWidget(Widget: ComponentType, cssContent: string) {
-  const renderTarget = document.querySelector('[data-widget-target]');
+  const renderTarget = document.querySelector(targetHostSelector);
   const mountWidget = mountWidgetWithCssContent(cssContent);
 
   // for now we can't rely on rendering directly to a dom node 

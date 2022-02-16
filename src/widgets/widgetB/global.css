@@ -1,0 +1,12 @@
+.btn-primary {
+  border: 0;
+  background-color: tomato;
+  border: 1px solid darkred;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: rgb(212, 85, 63);
+}

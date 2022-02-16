@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Widgets demo</title>
+    <style>
+      .testClass {
+        background: tomato;
+        border: darkred 1px solid;
+      }
 
-  <title>widget</title>
-
-  <style>
-    .testClass {
-      background: tomato;
-      border: darkred 1px solid;
-    }
-
-    .testClass::after {
-      content: " test";
-    }
-  </style>
-</head>
+      .testClass::after {
+        content: ' test';
+      }
+    </style>
+  </head>
   <body>
     <div class="demo">
       <h3 class="testClass">Hey from Example</h3>
-      <div id="widget-a"></div>
-      <div id="widget-b"></div>
+      <div data-widget-widgetA="random"></div>
+      <div data-widget-widgetB="random"></div>
     </div>
 
     <script src="../dist-dev/widgetA/index.js"></script>
     <script src="../dist-dev/widgetB/index.js"></script>
-    <script>
-      // An example using manual rendering
-      // delete data-widget-target then 
-      // you can uncomment this line
-      // myWidget.mountWidget(document.getElementById("test"))
-    </script>
-        <script>
-          widgetA.mountWidget(document.getElementById("widget-b"))
-          widgetB.mountWidget(document.getElementById("widget-a"))
-        </script>
+
+    <!-- 
+    for testing prod build 
+    <script src="../dist/widgetA/index.js"></script>
+    <script src="../dist/widgetB/index.js"></script> 
+    -->
   </body>
 </html>
